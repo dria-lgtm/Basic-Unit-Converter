@@ -4,6 +4,14 @@ This file lists all the updates made to our Simple Unit Conversion Tool project.
 
 ---
 
+**Version v1.5.0 – December 5, 2025, 18:05**
+
+- Added volume conversions (liters, milliliters, gallons).
+- Improved code structure by separating conversion functions.
+- Added error-handling for invalid numeric inputs.
+
+---
+
 **Version v1.4.0 - August 15, 2025, 21:35**
 - Added currency conversion (USD, PHP).
 - Implemented temperature conversion (Celsius, Fahrenheit).
