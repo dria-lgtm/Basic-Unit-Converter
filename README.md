@@ -27,19 +27,29 @@ Rounds results to 2–4 decimal places
 **EXAMPLE OF OUTPUT**
 
 --- Basic Unit Converter ---
+
 1: Meters → Feet
+
 2: Feet → Meters
+
 3: Celsius → Fahrenheit
+
 4: Fahrenheit → Celsius
+
 5: PHP → USD
+
 6: USD → PHP
 
-Choose (1-6): 5
+_Choose (1-6): 5_
+
 Enter PHP: 1000
+
 USD: 17.0
 
 Do you want to convert another value? (yes/no): yes
 
-Choose (1-6): 3
+_Choose (1-6): 3_
+
 Enter Celsius: 30
+
 Fahrenheit: 86.0
