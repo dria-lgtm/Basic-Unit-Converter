@@ -1,6 +1,8 @@
 ## BASIC UNIT CONVERTER
   The Basic Unit Converter is a simple Python program that converts values between units like length, weight, temperature, and time. It takes the user’s input and instantly calculates the equivalent value, making it a useful beginner-friendly coding project.
 
+---
+
 **FEATURES**
       -    Loop feature 
 Convert meters, centimeters, inches, and kilometers
@@ -9,6 +11,8 @@ Convert Celsius and Fahrenheit
 Handles invalid input
 Rounds results to 2–4 decimal places 
 
+---
+  
 **HOW TO RUN THE PROGRAM**
       - Make sure you have Python installed.
       - Save the file as unit_converter.py.
@@ -16,6 +20,8 @@ Rounds results to 2–4 decimal places
       -  Run with python unit_converter.py.
       - Follow the on-screen instructions.
       
+---
+    
 **EXAMPLE OF OUTPUT**
 --- Basic Unit Converter ---
 1: Meters → Feet
