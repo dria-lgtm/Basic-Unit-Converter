@@ -1,0 +1,47 @@
+FULL PROJECT PROPOSAL
+Title:
+Basic Unit Converter
+I. Problem
+People often need to convert units in school, cooking, travel, and other activities. Manual conversions can be slow and confusing, especially when formulas are involved.
+II. Target Users
+Students, teachers, and anyone who needs fast and accurate conversions.
+III. Objectives
+Provide a simple and beginner-friendly converter
+
+
+Allow users to convert different types of units
+
+
+Make conversions fast and accurate
+
+
+Create a clear menu to guide the user
+
+
+IV. Key Features
+Convert Length units
+
+
+Convert Weight units
+
+
+Convert Temperature units
+
+
+Input validation to avoid errors
+
+
+V. Expected Inputs
+Value to convert (number)
+
+
+Conversion type selected
+
+
+VI. Expected Outputs
+Converted value
+
+
+A message showing what the value was converted from and to
+VIII. Expected Outcome
+A working unit converter that helps users easily convert measurements without manual formulas.
