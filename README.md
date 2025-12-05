@@ -4,6 +4,7 @@
 ---
 
 **FEATURES**
+
       -    Loop feature 
 Convert meters, centimeters, inches, and kilometers
 Convert kilograms, and grams
@@ -14,6 +15,7 @@ Rounds results to 2–4 decimal places
 ---
   
 **HOW TO RUN THE PROGRAM**
+
       - Make sure you have Python installed.
       - Save the file as unit_converter.py.
       - Open a terminal or command prompt
@@ -23,6 +25,7 @@ Rounds results to 2–4 decimal places
 ---
     
 **EXAMPLE OF OUTPUT**
+
 --- Basic Unit Converter ---
 1: Meters → Feet
 2: Feet → Meters
