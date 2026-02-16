@@ -82,3 +82,9 @@ _Choose (1-6): 3_
 Enter Celsius: 30
 
 Fahrenheit: 86.0
+
+# FUTURE GOALS
+- Add graphical user interface (GUI)
+- Add more currencies with live API
+- Add unit tests
+- Deploy as web application
