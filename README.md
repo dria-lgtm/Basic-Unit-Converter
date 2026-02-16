@@ -27,14 +27,19 @@
 
 ---
 
-**FEATURES**
+**FEATURES (v1.5.0)**
 
-    - Loop feature 
-    - Convert meters, centimeters, inches, and kilometers
-    - Convert kilograms, and grams
-    - Convert Celsius and Fahrenheit
-    - Handles invalid input
-    - Rounds results to 2–4 decimal places 
+	- Loop feature for multiple conversions  
+	- Length conversions (meters, kilometers, miles, centimeters)  
+	- Mass/Weight conversions (grams, kilograms, pounds)  
+	- Temperature conversions (Celsius, Fahrenheit)  
+	- Time conversions (seconds, minutes, hours)  
+	- Volume conversions (liters, milliliters, gallons)  
+	- Currency conversion (USD, PHP)  
+	- Error handling for invalid numeric inputs  
+	- Decimal rounding (2–4 decimal places)  
+	- Improved menu-based interface  
+	- Separated conversion functions for better code structure  
 
 ---
   
