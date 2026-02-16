@@ -4,6 +4,25 @@ This file lists all the updates made to our Simple Unit Conversion Tool project.
 
 ---
 
+## [v1.6.0] – February 16, 2026
+
+### Added
+- Improved input validation with clearer error messages
+- Added confirmation prompt before exiting program
+- Added inline comments for better code readability
+- Updated documentation with detailed methodology section
+- Added programming ethics reflection section
+
+### Improved
+- Refactored function structure for better modularity
+- Standardized rounding format across all conversions
+- Cleaned up menu layout for better user experience
+
+### Documentation
+- Updated README with installation guide and project overview
+- Organized repository structure
+- Improved APA-style references formatting
+
 **Version v1.5.0 – December 5, 2025, 18:05**
 
 - Added volume conversions (liters, milliliters, gallons).
