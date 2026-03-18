@@ -1,10 +1,20 @@
 # CHANGELOG
 
-This file lists all the updates made to our Simple Unit Conversion Tool project.
+This file lists all the updates made to our Basic Unit Conversion Tool project.
+
+**Version v1.7.0 – March 10, 2026, 19:27**
+
+- Added area conversions 
+- Added speed conversions
+- Improved code structure by making it menu-based.
+- Added an error recovery feature, rewinding the program when a user enters an invalid menu option.
+- Created a web application version
+- Updated exchange rates for accuracy
+- Added tests to verify that all conversion formulas work correctly.
 
 ---
 
-## [v1.6.0] – February 16, 2026
+**Version 1.6.0 – February 16, 2026, 20:25**
 
 ### Added
 - Improved input validation with clearer error messages
@@ -23,7 +33,7 @@ This file lists all the updates made to our Simple Unit Conversion Tool project.
 - Organized repository structure
 - Improved APA-style references formatting
 
-**Version v1.5.0 – December 5, 2025, 18:05**
+**Version 1.5.0 – December 5, 2025, 18:05**
 
 - Added volume conversions (liters, milliliters, gallons).
 - Improved code structure by separating conversion functions.
@@ -31,37 +41,37 @@ This file lists all the updates made to our Simple Unit Conversion Tool project.
 
 ---
 
-**Version v1.4.0 - August 15, 2025, 21:35**
+**Version 1.4.0 - August 15, 2025, 21:35**
 - Added currency conversion (USD, PHP).
 - Implemented temperature conversion (Celsius, Fahrenheit).
 - Improved menu navigation.
 
 ---
 
-**Version v1.3.0 - August 15, 2025, 21:10**
+**Version 1.3.0 - August 15, 2025, 21:10**
 - Added time conversions (seconds, minutes, hours).
 - Improved the decimal results (up to 4 decimal places).
 
 ---
 
-**Version v1.2.0 - August 15, 2025, 20:43**
+**Version 1.2.0 - August 15, 2025, 20:43**
 - Added mass/weight conversions (grams, kilograms, pounds).
 - Fixed the incorrect formula for meters to kilometers.
 
 ---
 
-**Version v1.1.0 - August 15, 2025, 20:14**
+**Version 1.1.0 - August 15, 2025, 20:14**
 - Added length conversions (meters, kilometers, miles).
 - Improved the handling of invalid user inputs.
 
 ---
 
-**Version v1.0.1 - August 15, 2025, 19:50**
+**Version 1.0.1 - August 15, 2025, 19:50**
 - Added loop feature to convert multiple values.
 - Changed output format to be more user-friendly.
 
 ---
 
-**Version v1.0.0 - August 15, 2025, 19:23**
+**Version 1.0.0 - August 15, 2025, 19:23**
 - First version of the program.
 - Can convert between basic length units (meters and centimeters).
