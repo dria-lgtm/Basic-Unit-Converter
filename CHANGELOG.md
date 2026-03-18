@@ -6,11 +6,12 @@ This file lists all the updates made to our Basic Unit Conversion Tool project.
 
 - Added area conversions 
 - Added speed conversions
-- Improved code structure by making it menu-based.
-- Added an error recovery feature, rewinding the program when a user enters an invalid menu option.
+- Improved code structure by making it menu-based
+- Added an error recovery feature, rewinding the program when a user enters an invalid menu option
 - Created a web application version
 - Updated exchange rates for accuracy
-- Added tests to verify that all conversion formulas work correctly.
+- Added tests to verify that all conversion formulas work correctly
+- Added plural versions of conversion factors
 
 ---
 
