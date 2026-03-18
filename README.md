@@ -27,7 +27,7 @@
 
 ---
 
-**FEATURES (v1.5.0)**
+**FEATURES (v1.7.0)**
 
 	- Loop feature for multiple conversions  
 	- Length conversions (meters, kilometers, miles, centimeters)  
@@ -36,6 +36,8 @@
 	- Time conversions (seconds, minutes, hours)  
 	- Volume conversions (liters, milliliters, gallons)  
 	- Currency conversion (USD, PHP)  
+	- Speed conversion (m/2, km/hr, mph, knots)
+	- Area conversion (cm2, km2, hectare, square mile, square foot, acre)
 	- Error handling for invalid numeric inputs  
 	- Decimal rounding (2–4 decimal places)  
 	- Improved menu-based interface  
@@ -50,7 +52,24 @@
       - Open a terminal or command prompt
       -  Run with python unit_converter.py.
       - Follow the on-screen instructions.
-      
+
+---
+  
+**USER GUIDE**
+
+      1. Starting the Program
+	 		1.1. Open a command prompt
+	  		1.2. Run the Python program
+	  		1.3. The main menu will appear, showing the available conversion categories
+	  2. Selecting a Category – Enter a number corresponding to the category you want to use
+	  3. Selecting a Unit – The program will display all available units in the selected category
+	  4. Entering a Value – After selecting the units, the program will ask for the value to convert.
+	  5. Viewing the Result – The program will calculate and display the converted result
+	  6. Performing Another Conversion – After displaying the result, the program will ask:
+	  		6.1. “Would you like to try again? (yes/no)
+	 7. Exiting the Program – The program can be exited in two ways:
+	 		7.1. By selecting 9 (Exit) from the main menu
+			7.2. By typing no when asked if you want to try again
 ---
     
 **EXAMPLE OF OUTPUT**
@@ -85,9 +104,7 @@ Fahrenheit: 86.0
 
 # FUTURE GOALS
 - Add graphical user interface (GUI)
-- Add more currencies with live API
-- Add unit tests
-- Deploy as web application
+- Add more currencies
 
 # METHODOLOGY
 1. Development Approach
