@@ -2,7 +2,7 @@
 
 This file lists all the updates made to our Basic Unit Conversion Tool project.
 
-**Version v1.7.0 – March 10, 2026, 19:27**
+**Version 1.7.0 – March 10, 2026, 19:27**
 
 - Added area conversions 
 - Added speed conversions
