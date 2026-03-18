@@ -2,7 +2,20 @@
 
 This file lists all the updates made to our Basic Unit Conversion Tool project.
 
-**Version 1.7.0 – March 10, 2026, 19:27**
+---
+
+**Version 1.8.0 – March 11, 2026, 21:46**
+
+- Improved user interface
+- Fixed bugs
+- Updated categorized unit conversion system
+- Added singuler/plural unit formatting
+- Improved "Would you like to try again?" prompt
+- Revised file and function structure
+
+---
+
+Version 1.7.0 – March 4, 2026, 19:27**
 
 - Added area conversions 
 - Added speed conversions
@@ -11,7 +24,6 @@ This file lists all the updates made to our Basic Unit Conversion Tool project.
 - Created a web application version
 - Updated exchange rates for accuracy
 - Added tests to verify that all conversion formulas work correctly
-- Added plural versions of conversion factors
 
 ---
 
