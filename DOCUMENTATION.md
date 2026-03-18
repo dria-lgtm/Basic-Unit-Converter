@@ -1,8 +1,12 @@
 Improvements:
 - Conversion logic separated into functions
 - Input validation centralized
-- Main loop handled in `run_program()`
+- Main loop handled
 - Improved readability and maintainability
+- Improved user interface
+- Introduced singular/plural unit formatting
+- Improved error recovery system
+- Categorized unit conversion system
 
 # TECHNOLOGY USED
 
