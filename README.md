@@ -48,7 +48,7 @@
 **HOW TO RUN THE PROGRAM**
 
       - Make sure you have Python installed.
-      - Save the file as unit_converter.py.
+      - Save the file named as unit_converter.py.
       - Open a terminal or command prompt
       -  Run with python unit_converter.py.
       - Follow the on-screen instructions.
