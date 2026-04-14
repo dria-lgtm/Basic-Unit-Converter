@@ -1,0 +1,185 @@
+import sqlite3
+
+# --- DATABASE SETUP ---
+def setup_database():
+    conn = sqlite3.connect("unit_converter.db")
+    cursor = conn.cursor()
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS units (
+        category TEXT,
+        unit_name TEXT,
+        factor REAL
+    )
+    """)
+
+    # Check if already filled
+    cursor.execute("SELECT COUNT(*) FROM units")
+    if cursor.fetchone()[0] == 0:
+        data = [
+            # Length
+            ("Length", "meter", 1),
+            ("Length", "kilometer", 1000),
+            ("Length", "centimeter", 0.01),
+            ("Length", "millimeter", 0.001),
+            ("Length", "foot", 0.3048),
+            ("Length", "inch", 0.0254),
+            ("Length", "yard", 0.9144),
+            ("Length", "mile", 1609.34),
+
+            # Weight
+            ("Weight", "kilogram", 1),
+            ("Weight", "gram", 0.001),
+            ("Weight", "mg", 0.000001),
+            ("Weight", "metric ton", 1000),
+            ("Weight", "pound", 0.453592),
+            ("Weight", "ounce", 0.0283495),
+
+            # Volume
+            ("Volume", "liter", 1),
+            ("Volume", "milliliter", 0.001),
+            ("Volume", "gallon", 3.78541),
+            ("Volume", "quart", 0.946353),
+            ("Volume", "pint", 0.473176),
+            ("Volume", "cup", 0.24),
+            ("Volume", "fluid ounce", 0.0295735),
+
+            # Area
+            ("Area", "m2", 1),
+            ("Area", "cm2", 0.0001),
+            ("Area", "km2", 1000000),
+            ("Area", "hectare", 10000),
+            ("Area", "square mile", 2589988),
+            ("Area", "square foot", 0.092903),
+            ("Area", "acre", 4046.86),
+
+            # Speed
+            ("Speed", "meters/second", 1),
+            ("Speed", "km/hr", 0.277778),
+            ("Speed", "mph", 0.44704),
+            ("Speed", "knots", 0.514444),
+
+            # Time
+            ("Time", "second", 1),
+            ("Time", "minute", 60),
+            ("Time", "hour", 3600),
+            ("Time", "day", 86400),
+            ("Time", "week", 604800),
+            ("Time", "month", 2592000),
+            ("Time", "year", 31536000),
+        ]
+
+        cursor.executemany("INSERT INTO units VALUES (?, ?, ?)", data)
+
+    conn.commit()
+    conn.close()
+
+
+# --- DATABASE FUNCTIONS ---
+def get_units(category):
+    conn = sqlite3.connect("unit_converter.db")
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT unit_name FROM units WHERE category=?", (category,))
+    units = [row[0] for row in cursor.fetchall()]
+
+    conn.close()
+    return units
+
+
+def get_factor(category, unit):
+    conn = sqlite3.connect("unit_converter.db")
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "SELECT factor FROM units WHERE category=? AND unit_name=?",
+        (category, unit)
+    )
+    result = cursor.fetchone()[0]
+
+    conn.close()
+    return result
+
+
+def convert(category, value, from_unit, to_unit):
+    base = get_factor(category, from_unit)
+    target = get_factor(category, to_unit)
+    return round(value * base / target, 4)
+
+
+# --- TEMPERATURE ---
+def convert_temperature(value, from_unit, to_unit):
+    if from_unit == "celsius":
+        if to_unit == "fahrenheit":
+            return round((value * 9/5) + 32, 2)
+        if to_unit == "kelvin":
+            return round(value + 273.15, 2)
+
+    if from_unit == "fahrenheit":
+        if to_unit == "celsius":
+            return round((value - 32) * 5/9, 2)
+        if to_unit == "kelvin":
+            return round((value - 32) * 5/9 + 273.15, 2)
+
+    if from_unit == "kelvin":
+        if to_unit == "celsius":
+            return round(value - 273.15, 2)
+        if to_unit == "fahrenheit":
+            return round((value - 273.15) * 9/5 + 32, 2)
+
+    return value
+
+
+# --- MAIN PROGRAM ---
+setup_database()
+
+categories = [
+    "Length", "Weight", "Volume", "Area",
+    "Speed", "Time", "Temperature"
+]
+
+while True:
+    print("\n--- UNIT CONVERTER ---")
+    for i, cat in enumerate(categories, 1):
+        print(f"{i}. {cat}")
+    print("8. Exit")
+
+    choice = input("Choose category: ")
+
+    if choice == "8":
+        print("Goodbye!")
+        break
+
+    if not choice.isdigit() or int(choice) not in range(1, 8):
+        print("Invalid choice!")
+        continue
+
+    category = categories[int(choice) - 1]
+
+    if category == "Temperature":
+        units = ["celsius", "fahrenheit", "kelvin"]
+    else:
+        units = get_units(category)
+
+    print("\nAvailable units:")
+    for i, u in enumerate(units, 1):
+        print(f"{i}. {u}")
+
+    try:
+        from_u = int(input("From: ")) - 1
+        to_u = int(input("To: ")) - 1
+        value = float(input("Value: "))
+
+        from_unit = units[from_u]
+        to_unit = units[to_u]
+
+        if category == "Temperature":
+            result = convert_temperature(value, from_unit, to_unit)
+        else:
+            result = convert(category, value, from_unit, to_unit)
+
+        print(f"\n{value} {from_unit} = {result} {to_unit}")
+
+    except:
+        print("Invalid input!")
+        continue
